@@ -16,7 +16,7 @@ const GET_USERS = gql`
 export default function UsersList() {
   const { loading, error, data } = useQuery(GET_USERS);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p>Loading users...</p>;
   if (error) {
     console.error("Error fetching users:", error);
     return <p>Error: {error.message}</p>;
